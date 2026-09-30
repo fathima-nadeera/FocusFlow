@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+
+    <circle
+        cx="50"
+        cy="50"
+        r="46"
+        fill="#ff5a2c"
+    />
+
+    <path
+        d="M50 27
+           C42 27 36 34 36 43
+           C36 53 43 59 50 67
+           C57 59 64 53 64 43
+           C64 34 58 27 50 27Z"
+        fill="white"
+    />
+
+    <circle
+        cx="50"
+        cy="45"
+        r="5"
+        fill="#ff5a2c"
+    />
+
+</svg>

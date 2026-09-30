@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FocusFlow - Pomodoro Timer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="favicon.svg">
+
+</head>
+
+
+<body>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+
+        <div id="notificationTitle"></div>
+
+        <div id="notificationMessage"></div>
+
+    </div>
+
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header>
+
+            <div class="header-top">
+
+                <div class="header-text">
+
+                    <h1>FocusFlow</h1>
+
+                    <p>
+                        Focus better. Study smarter.
+                    </p>
+
+                </div>
+
+
+                <!-- Theme Button -->
+                <button
+                    id="themeToggle"
+                    class="theme-toggle"
+                    type="button"
+                    aria-label="Toggle theme">
+
+                    🌙
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <main>
+
+
+            <!-- TIMER CARD -->
+            <section class="timer-card">
+
+
+                <!-- MODES -->
+                <div class="mode-buttons">
+
+                    <button
+                        class="mode active"
+                        type="button">
+
+                        Focus
+
+                    </button>
+
+
+                    <button
+                        class="mode"
+                        type="button">
+
+                        Short Break
+
+                    </button>
+
+
+                    <button
+                        class="mode"
+                        type="button">
+
+                        Long Break
+
+                    </button>
+
+                </div>
+
+
+                <!-- STATUS -->
+                <div
+                    id="statusIndicator"
+                    class="status-indicator">
+
+                    <span class="status-dot"></span>
+
+                    <span id="statusText">
+                        Ready to Focus
+                    </span>
+
+                </div>
+
+
+                <!-- TIMER -->
+                <div class="timer">
+                    25:00
+                </div>
+
+
+                <!-- CONTROLS -->
+                <div class="timer-controls">
+
+                    <button
+                        id="startBtn"
+                        type="button">
+
+                        Start
+
+                    </button>
+
+
+                    <button
+                        id="resetBtn"
+                        type="button">
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- TASK -->
+            <section class="task-card">
+
+                <h2>
+                    What are you working on?
+                </h2>
+
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter your task..."
+                    autocomplete="off">
+
+            </section>
+
+
+
+            <!-- STATS -->
+            <section class="stats">
+
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        🍅
+                    </span>
+
+                    <h3 id="sessionCount">
+                        0
+                    </h3>
+
+                    <p>
+                        Sessions
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span class="stat-icon">
+                        ⏱️
+                    </span>
+
+                    <h3 id="focusTime">
+                        0 min
+                    </h3>
+
+                    <p>
+                        Focus Time
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- DAILY GOAL -->
+            <section class="goal-card">
+
+
+                <div class="goal-header">
+
+                    <div>
+
+                        <h2>
+                            Daily Goal
+                        </h2>
+
+                        <p>
+                            Complete 4 focus sessions
+                        </p>
+
+                    </div>
+
+
+                    <span id="goalText">
+                        0 / 4 Sessions
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressFill">
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- SESSION HISTORY -->
+            <section class="history-card">
+
+
+                <div class="history-header">
+
+                    <div>
+
+                        <h2>
+                            Recent Sessions
+                        </h2>
+
+                        <p>
+                            Your completed focus sessions
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="clearHistoryBtn"
+                        type="button">
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+
+                <div id="sessionHistory">
+
+                    <div class="empty-history">
+
+                        No sessions completed yet.
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="resetProgressBtn"
+                    class="reset-progress"
+                    type="button">
+
+                    Reset Progress
+
+                </button>
+
+            </section>
+
+
+
+            <!-- WEEKLY PRODUCTIVITY -->
+            <section class="weekly-card">
+
+
+                <div class="weekly-header">
+
+                    <div>
+
+                        <h2>
+                            Weekly Productivity
+                        </h2>
+
+                        <p>
+                            Your focus sessions this week
+                        </p>
+
+                    </div>
+
+
+                    <div class="weekly-total">
+
+                        <span id="weeklyTotal">
+                            0
+                        </span>
+
+                        <small>
+                            sessions
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="weeklyChart"
+                    class="weekly-chart">
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            FocusFlow © 2026
+
+        </footer>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
